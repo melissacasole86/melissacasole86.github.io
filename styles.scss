@@ -77,3 +77,39 @@ section {
         margin-right: .675em;
     }
 }
+
+@media screen and (max-width: 767px){
+    .email {
+        .inner {
+            position: relative;
+            align-items: flex-start;
+            flex-direction: column;
+            * {
+                margin: .5em 0;
+            }
+            .btn-primary {
+                position: absolute;
+                right: 20px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 520px){
+    .email {
+        .inner {
+            position: relative;
+            align-items: flex-start;
+            flex-direction: column;
+            * {
+                margin: .25em 0;
+            }
+            .btn-primary {
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+}

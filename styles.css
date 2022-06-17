@@ -96,4 +96,45 @@ section header {
 .btn-primary i {
   margin-right: .675em;
 }
+
+@media screen and (max-width: 767px) {
+  .email .inner {
+    position: relative;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .email .inner * {
+    margin: .5em 0;
+  }
+  .email .inner .btn-primary {
+    position: absolute;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .email .inner {
+    position: relative;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .email .inner * {
+    margin: .25em 0;
+  }
+  .email .inner .btn-primary {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
