@@ -1,7 +1,8 @@
 'use strict'
-//gsap
 
 $(document).ready(function(){
+    // scripts for patterns
+
     $('.btn-primary').click(function(){
         var email = $(this).closest('.email');
 
@@ -13,6 +14,24 @@ $(document).ready(function(){
             email.removeClass('selected');
         }
     });
+
+
+
+    //scripts for index
+    
+    $('li').click(function(){
+        var bar = $('.bar');
+        var liPos = $(this).offset().top;
+
+        $(bar).offset({top:liPos});
+
+        $(this).addClass('active').closest('nav').find('.active').not(this).removeClass('active');
+    });
+    
 });
+
+
+
+
 
 

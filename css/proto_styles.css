@@ -1,0 +1,94 @@
+@import url("/css/tokens.css");
+html,
+body {
+  background-color: #F4F4F4;
+  height: 100vh;
+  font-size: 16px;
+}
+
+.container-fluid,
+p, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul i, li i {
+  margin-right: .675em;
+}
+
+section {
+  margin: 1.5em 0;
+}
+
+section label {
+  text-transform: uppercase;
+  color: #A8A6A6;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: .875em;
+}
+
+nav {
+  height: 100%;
+  position: fixed;
+  width: 200px;
+  background: white;
+  border: 1px solid #FFFFFF;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+nav .nav-container {
+  position: relative;
+}
+
+nav .bar {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  content: '';
+  width: 6px;
+  height: 28px;
+  background: var(--blueberry--600);
+  right: 0;
+  top: 0;
+  border-radius: 99em;
+  position: absolute;
+  z-index: 2;
+}
+
+nav .nav-header {
+  padding: 1em 0 0 1em;
+}
+
+nav section {
+  padding: 0 0 0 1em;
+}
+
+nav ul {
+  margin-left: .475em;
+}
+
+nav ul li {
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  font-size: .875rem;
+  padding: .575em 0;
+}
+
+nav ul li.active {
+  color: var(--blueberry--600);
+  font-weight: 500;
+}
+
+nav ul li:hover, nav ul li :focus {
+  cursor: pointer;
+  color: var(--blueberry--600);
+}
+/*# sourceMappingURL=proto_styles.css.map */
