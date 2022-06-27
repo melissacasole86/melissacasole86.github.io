@@ -6,9 +6,11 @@
 
 html,
 body {
-  background-color: #F4F4F4;
+  font-size: 16px;
+  background-color: var(--white--400);
   height: 100vh;
   font-size: 16px;
+  color: var(--black--600);
 }
 
 .container-fluid,
@@ -19,6 +21,7 @@ h3,
 h4,
 h5,
 h6 {
+  height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -53,7 +56,7 @@ section label {
   margin-bottom: .875em;
 }
 
-nav {
+.mainNav {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   height: 100%;
@@ -65,11 +68,11 @@ nav {
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
-nav .logo_closed {
+.mainNav .logo_closed {
   display: none;
 }
 
-nav .anchor {
+.mainNav .anchor {
   position: absolute;
   right: -14px;
   top: 40px;
@@ -94,24 +97,24 @@ nav .anchor {
   transition: all 0.4s ease;
 }
 
-nav .anchor i {
+.mainNav .anchor i {
   color: var(--black--600);
 }
 
-nav .anchor:hover {
+.mainNav .anchor:hover {
   cursor: pointer;
   background: var(--blueberry--600);
 }
 
-nav .anchor:hover i {
+.mainNav .anchor:hover i {
   color: var(--white---600);
 }
 
-nav .nav-container {
+.mainNav .nav-container {
   position: relative;
 }
 
-nav .bar {
+.mainNav .bar {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   content: '';
@@ -125,19 +128,19 @@ nav .bar {
   z-index: 2;
 }
 
-nav .nav-header {
+.mainNav .nav-header {
   padding: 1em 0 0 1em;
 }
 
-nav section {
+.mainNav section {
   padding: 0 0 0 1em;
 }
 
-nav ul {
+.mainNav ul {
   margin-left: .475em;
 }
 
-nav ul li {
+.mainNav ul li {
   color: var(--black--600);
   position: relative;
   -webkit-transition: all 0.4s ease;
@@ -155,46 +158,141 @@ nav ul li {
           align-items: baseline;
 }
 
-nav ul li i {
+.mainNav ul li i {
   width: 20px;
   height: 20px;
 }
 
-nav ul li.active {
+.mainNav ul li.active {
   color: var(--blueberry--600);
   font-weight: 500;
 }
 
-nav ul li.active a {
+.mainNav ul li.active a {
   color: var(--blueberry--600);
   font-weight: 500;
 }
 
-nav ul li:hover,
-nav ul li :focus {
+.mainNav ul li:hover,
+.mainNav ul li :focus {
   cursor: pointer;
   color: var(--blueberry--600);
 }
 
-nav.closed {
+.mainNav.closed {
   width: 50px;
 }
 
-nav.closed .logo_open {
+.mainNav.closed .logo_open {
   display: none;
 }
 
-nav.closed .logo_closed {
+.mainNav.closed .logo_closed {
   display: block;
   margin-left: -1em;
 }
 
-nav.closed section {
+.mainNav.closed section {
   padding-left: .5em;
 }
 
-nav.closed section label,
-nav.closed section li a {
+.mainNav.closed section label,
+.mainNav.closed section li a {
   display: none;
+}
+
+.btn {
+  border-radius: 50px;
+  padding: .55em 1.5em;
+}
+
+.btn-primary {
+  background: var(--blueberry--600);
+  border: 1px solid var(--blueberry--600);
+}
+
+.breadCrumb {
+  position: relative;
+  top: -20px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+header .page-actions .btn {
+  margin: 0 .375em;
+}
+
+header .page-paginator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+header .page-paginator span {
+  position: relative;
+  top: .175em;
+  color: var(--black--600);
+  font-size: 1.5rem;
+}
+
+header .page-paginator .control {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background: var(--white---600);
+  border-radius: 99em;
+  margin: 0 1.75em;
+  border: 1px solid #F3F3F3;
+  -webkit-box-shadow: var(--elevation---medium);
+          box-shadow: var(--elevation---medium);
+  padding: .575em .8em;
+}
+
+header .page-paginator .control .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 0;
+}
+
+header .page-paginator .control .nav-link i {
+  margin: 0;
+}
+
+header .page-paginator .control:hover {
+  cursor: pointer;
+  background: var(--blueberry--600);
+}
+
+header .page-paginator .control:hover .nav-link i {
+  color: var(--white---600);
+}
+
+main {
+  width: calc(100% - 200px);
+  left: 200px;
+  position: relative;
+  padding: 2em 3em;
 }
 /*# sourceMappingURL=proto_styles.css.map */
