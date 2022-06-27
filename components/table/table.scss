@@ -1,0 +1,152 @@
+@import url("/css/tokens.css");
+@import url("/css/main.css");
+
+//table styles
+
+.table-container {
+    padding: 0 0 1.5em 0;
+    background-color: var(--white---600);
+    border: 1px solid var(--white--400);
+    border-radius: 6px;
+    box-shadow: var(--elevation---large);
+    border: 1px solid var(--white--300);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+
+    .t-checkbox {
+        width: 30px;
+        .form-check {
+            position: relative;
+            top: 2px;
+        }
+    }
+
+    th,
+    td {
+        word-wrap: break-word;
+        padding: 0.825em;
+        text-align: left;
+    }
+
+    th {
+        background: var(--th-bg-color);
+        font-size: var(--th-text-size);
+
+        &:first-of-type {
+            border-radius: 6px 0 0 0;
+        }
+        &:last-of-type {
+            border-radius: 0 6px 0 0;
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background: var(--td-bg-dark);
+                ;
+            }
+
+            &:nth-child(odd) {
+                background: var(--td-bg-light);
+            }
+
+            td {
+                font-size: var(--td-text-size);
+            }
+        }
+    }
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: 0.5em 0 0.75em;
+}
+
+
+
+tr {
+    &.panel {
+        display: none;
+        height: 0px;
+
+        &.open {
+            height: 400px;
+        }
+    }
+}
+
+tr:nth-child(4n + 1),
+tr:nth-child(4n + 2) {
+    background: white;
+}
+
+.panel-body {
+    .title {
+        text-align: left;
+    }
+}
+
+.caret {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    float: right;
+    right: 2em;
+}
+
+@media screen and (max-width: 800px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 0.625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+        text-align: right;
+    }
+
+    table td::before {
+        /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}

@@ -1,0 +1,37 @@
+@import url("/css/tokens.css");
+@import url("/css/main.css");
+.form-field input {
+  border-radius: 4px;
+  border: 1px solid var(--gray--600);
+  position: relative;
+}
+
+.form-field input:focus {
+  border-color: var(--blueberry--600);
+}
+
+.form-field label {
+  color: var(--black--300);
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.form-field label.active {
+  top: -11px;
+  color: #555;
+  background-color: white;
+  width: auto;
+}
+
+.form-field.with-icon i {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 2;
+}
+
+.form-field.with-icon label {
+  left: 44px;
+}
+/*# sourceMappingURL=input.css.map */

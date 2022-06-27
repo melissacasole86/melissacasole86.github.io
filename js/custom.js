@@ -30,9 +30,17 @@
         $(this).addClass('active').closest('nav').find('.active').not(this).removeClass('active');
     });
 
+    //animate main content full/small
+    
     // animate nav to close/open
 
     $('.anchor').click(function(){
+        if($('main').hasClass('small')){
+            $('main').addClass('full').removeClass('small')
+        } else {
+            $('main').removeClass('full').addClass('small');
+        }
+
         $(this).toggleClass('rotate180');
         $('nav').toggleClass('closed');
     });
