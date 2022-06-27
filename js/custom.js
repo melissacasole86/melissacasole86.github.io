@@ -18,6 +18,8 @@ $(document).ready(function(){
 
 
     //scripts for index
+
+    // move bar in main nav to active link
     
     $('li').click(function(){
         var bar = $('.bar');
@@ -26,6 +28,14 @@ $(document).ready(function(){
         $(bar).offset({top:liPos});
 
         $(this).addClass('active').closest('nav').find('.active').not(this).removeClass('active');
+    });
+
+    // animate nav to close/open
+
+    $('.anchor').click(function(){
+        $(this).toggleClass('rotate180');
+        $('nav').toggleClass('closed');
+        $('li').empty() ;
     });
     
 });
