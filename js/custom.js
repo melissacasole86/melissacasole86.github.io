@@ -1,6 +1,6 @@
 'use strict'
 
-// $(document).ready(function(){
+ $(document).ready(function(){
 //     // scripts for patterns
 
 //     $('.btn-primary').click(function(){
