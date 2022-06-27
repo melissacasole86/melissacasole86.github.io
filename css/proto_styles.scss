@@ -133,6 +133,14 @@ nav {
             transition: all 0.4s ease;
             font-size: .875rem;
             padding: .575em 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+
+            i {
+                width: 20px;
+                height: 20px;
+            }
 
             &.active {
                 color: var(--blueberry--600);

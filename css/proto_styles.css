@@ -144,6 +144,20 @@ nav ul li {
   transition: all 0.4s ease;
   font-size: .875rem;
   padding: .575em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+nav ul li i {
+  width: 20px;
+  height: 20px;
 }
 
 nav ul li.active {
