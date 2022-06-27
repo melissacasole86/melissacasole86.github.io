@@ -21,10 +21,10 @@ $(document).ready(function(){
 
     // move bar in main nav to active link
     
-    $('li').click(function(){
+    $('li a').click(function(event){
         var bar = $('.bar');
         var liPos = $(this).offset().top;
-
+        event.preventDefault();
         $(bar).offset({top:liPos});
 
         $(this).addClass('active').closest('nav').find('.active').not(this).removeClass('active');
@@ -35,7 +35,6 @@ $(document).ready(function(){
     $('.anchor').click(function(){
         $(this).toggleClass('rotate180');
         $('nav').toggleClass('closed');
-        $('li').empty() ;
     });
     
 });

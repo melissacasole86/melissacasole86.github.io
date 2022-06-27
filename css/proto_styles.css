@@ -12,18 +12,32 @@ body {
 }
 
 .container-fluid,
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
 }
 
-ul, li {
+ul,
+li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-ul i, li i {
+ul a,
+li a {
+  text-decoration: none;
+  color: var(--nav-link);
+}
+
+ul i,
+li i {
   margin-right: .675em;
 }
 
@@ -49,6 +63,10 @@ nav {
   border: 1px solid #FFFFFF;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+nav .logo_closed {
+  display: none;
 }
 
 nav .anchor {
@@ -133,12 +151,36 @@ nav ul li.active {
   font-weight: 500;
 }
 
-nav ul li:hover, nav ul li :focus {
+nav ul li.active a {
+  color: var(--blueberry--600);
+  font-weight: 500;
+}
+
+nav ul li:hover,
+nav ul li :focus {
   cursor: pointer;
   color: var(--blueberry--600);
 }
 
 nav.closed {
   width: 50px;
+}
+
+nav.closed .logo_open {
+  display: none;
+}
+
+nav.closed .logo_closed {
+  display: block;
+  margin-left: -1em;
+}
+
+nav.closed section {
+  padding-left: .5em;
+}
+
+nav.closed section label,
+nav.closed section li a {
+  display: none;
 }
 /*# sourceMappingURL=proto_styles.css.map */
