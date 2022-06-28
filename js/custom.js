@@ -45,7 +45,23 @@
         $('nav').toggleClass('closed');
     });
     
+
+    // minimize left nav at mobile breakpoint
+
+    $(window).resize(function(){
+        if($(this).width() < 1024){
+            $('.mainNav').addClass('closed')
+            $('main').addClass('full').removeClass('small')
+            $('.anchor').addClass('rotate180');
+        } else {
+            $('.mainNav').removeClass('closed')
+            $('main').removeClass('full').addClass('small')
+            $('.anchor').removelass('rotate180');
+        }
+    });
 });
+
+
 
 
 
